@@ -17,6 +17,7 @@ no: {
   "nav.tools": "Verktøy",
   "nav.about": "Om oss",
   "nav.cta": "Hold kontakten",
+  "nav.logout": "Logg ut",
 
   "hero.eyebrow": "VDC Innovation Week · Oslo · 2.–5. juni 2026",
   "hero.langhint": "Denne oppsummeringen åpner på engelsk — bytt mellom NO / EN / ES / DE oppe til høyre når du vil.",
@@ -309,6 +310,7 @@ en: {
   "nav.tools": "Tools",
   "nav.about": "About",
   "nav.cta": "Keep in touch",
+  "nav.logout": "Log out",
 
   "hero.eyebrow": "VDC Innovation Week · Oslo · 2–5 June 2026",
   "hero.langhint": "This recap defaults to English — switch between NO / EN / ES / DE at the top right whenever you like.",
@@ -601,6 +603,7 @@ es: {
   "nav.tools": "Herramientas",
   "nav.about": "Nosotros",
   "nav.cta": "Sigamos en contacto",
+  "nav.logout": "Cerrar sesión",
 
   "hero.eyebrow": "VDC Innovation Week · Oslo · 2–5 junio 2026",
   "hero.langhint": "Este resumen abre en inglés — cambia entre NO / EN / ES / DE arriba a la derecha cuando quieras.",
@@ -893,6 +896,7 @@ de: {
   "nav.tools": "Werkzeuge",
   "nav.about": "Über uns",
   "nav.cta": "In Kontakt bleiben",
+  "nav.logout": "Abmelden",
 
   "hero.eyebrow": "VDC Innovation Week · Oslo · 2.–5. Juni 2026",
   "hero.langhint": "Diese Zusammenfassung öffnet auf Englisch — wechsle oben rechts jederzeit zwischen NO / EN / ES / DE.",

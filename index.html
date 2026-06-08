@@ -97,7 +97,13 @@
   .msg{min-height:22px;margin-top:14px;font-size:14.5px;color:#ff8a8a;font-weight:400;
     opacity:0;transform:translateY(-3px);transition:opacity var(--dur),transform var(--dur)}
   .msg.show{opacity:1;transform:none}
-  .lockhint{margin-top:6px;font-size:13px;color:rgba(255,255,255,.45);font-weight:300}
+  .help{margin-top:8px;font-size:14px;color:rgba(255,255,255,.66);font-weight:300;line-height:1.55;
+    max-height:0;overflow:hidden;opacity:0;transition:all .32s var(--ease)}
+  .help.show{max-height:120px;opacity:1;margin-top:10px}
+  .help a{color:#aee06a;text-decoration:none;border-bottom:1px solid rgba(174,224,106,.4);
+    transition:border-color var(--dur),color var(--dur);white-space:nowrap}
+  .help a:hover{color:#c6f088;border-color:#c6f088}
+  .lockhint{margin-top:10px;font-size:13px;color:rgba(255,255,255,.45);font-weight:300}
 
   .gate.shake{animation:shake .42s var(--ease)}
   @keyframes shake{10%,90%{transform:translateX(-2px)}30%,70%{transform:translateX(5px)}50%{transform:translateX(-7px)}}
@@ -159,6 +165,7 @@
         </button>
       </div>
       <div class="msg" id="msg"></div>
+      <div class="help" id="help"></div>
       <div class="lockhint" data-t="hint"></div>
     </form>
   </div>
@@ -188,6 +195,7 @@
       btn:"Åpne",
       hint:"Denne siden er privat. Passordet ble delt med gruppen din.",
       err:"Feil passord — prøv igjen.",
+      errHelp:"Får du det ikke til? <a href=\"mailto:oyvindb@leancommunications.no\">Send meg en e-post</a> eller ring <a href=\"tel:+4797700104\">+47 977 00 104</a>.",
       working:"Sjekker …"
     },
     en:{
@@ -200,6 +208,7 @@
       btn:"Enter",
       hint:"This page is private. The password was shared with your group.",
       err:"That password isn’t right — try again.",
+      errHelp:"Can’t get in? <a href=\"mailto:oyvindb@leancommunications.no\">Email me</a> or call <a href=\"tel:+4797700104\">+47 977 00 104</a>.",
       working:"Checking …"
     },
     es:{
@@ -212,6 +221,7 @@
       btn:"Entrar",
       hint:"Esta página es privada. La contraseña se compartió con tu grupo.",
       err:"La contraseña no es correcta — inténtalo de nuevo.",
+      errHelp:"¿No consigues entrar? <a href=\"mailto:oyvindb@leancommunications.no\">Escríbeme</a> o llama al <a href=\"tel:+4797700104\">+47 977 00 104</a>.",
       working:"Comprobando …"
     },
     de:{
@@ -224,6 +234,7 @@
       btn:"Öffnen",
       hint:"Diese Seite ist privat. Das Passwort wurde mit deiner Gruppe geteilt.",
       err:"Das Passwort stimmt nicht — versuch es erneut.",
+      errHelp:"Kommst du nicht rein? <a href=\"mailto:oyvindb@leancommunications.no\">Schreib mir</a> oder ruf an: <a href=\"tel:+4797700104\">+47 977 00 104</a>.",
       working:"Prüfe …"
     }
   };
@@ -273,21 +284,27 @@
   var pw=document.getElementById('pw');
   var go=document.getElementById('go');
   var msg=document.getElementById('msg');
+  var help=document.getElementById('help');
   var gate=form;
 
   function fail(){
     var t=TX[cur]||TX.en;
     msg.textContent=t.err; msg.classList.add('show');
+    help.innerHTML=t.errHelp; help.classList.add('show');
     gate.classList.remove('shake'); void gate.offsetWidth; gate.classList.add('shake');
     pw.value=""; pw.focus();
   }
+
+  pw.addEventListener('input',function(){
+    if(msg.classList.contains('show')){ msg.classList.remove('show'); help.classList.remove('show'); }
+  });
 
   form.addEventListener('submit',async function(ev){
     ev.preventDefault();
     var t=TX[cur]||TX.en;
     var val=pw.value.trim();
     if(!val){ pw.focus(); return; }
-    msg.classList.remove('show');
+    msg.classList.remove('show'); help.classList.remove('show');
     go.disabled=true; go.querySelector('span').textContent=t.working;
     var ok=false;
     try{ ok=(await derive(val))===HASH; }catch(e){ ok=false; }

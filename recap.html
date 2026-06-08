@@ -72,6 +72,12 @@
     padding:6px 12px;border-radius:999px;transition:all var(--dur) var(--ease)}
   .lang-btn:hover{color:var(--blue)}
   .lang-btn.on{background:var(--blue);color:#fff}
+  .logout-btn{display:inline-flex;align-items:center;gap:7px;font-family:'Barlow Semi Condensed';
+    font-weight:700;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--blue60);
+    background:transparent;border:1px solid var(--rule);border-radius:999px;padding:7px 15px;cursor:pointer;
+    transition:all var(--dur) var(--ease);margin-left:6px;white-space:nowrap}
+  .logout-btn svg{width:15px;height:15px;stroke:currentColor;stroke-width:2;fill:none}
+  .logout-btn:hover{color:var(--red);border-color:var(--red)}
   .langhint{display:inline-flex;align-items:center;gap:9px;margin-bottom:22px;padding:8px 15px 8px 12px;background:var(--tint);border:1px solid var(--rule);border-radius:999px;font-size:13px;font-weight:300;color:var(--blue80);max-width:100%}
   .langhint svg{width:16px;height:16px;flex:none;fill:none;stroke:var(--greendk);stroke-width:1.6}
   .langhint span{text-wrap:pretty}
@@ -445,6 +451,10 @@
         <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
         <button class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
       </div>
+      <button class="logout-btn" id="logout" type="button">
+        <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 17l5-5-5-5M21 12H9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="nav.logout">Log out</span>
+      </button>
     </div>
   </div>
 </nav>
@@ -1041,5 +1051,18 @@
 <script src="content.js"></script>
 <script src="image-slot.js"></script>
 <script src="app.js"></script>
+<script>
+/* Log out — clears the session unlock flag and goes to the sign-off page. */
+(function(){
+  var b=document.getElementById("logout");
+  if(!b) return;
+  b.addEventListener("click",function(){
+    try{ sessionStorage.removeItem("iwo-auth"); }catch(e){}
+    var l="en";
+    try{ l=localStorage.getItem("iwo-lang")||"en"; }catch(e){}
+    location.href="logget-ut.html?lang="+l;
+  });
+})();
+</script>
 </body>
 </html>
