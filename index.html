@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Innovation Week Oslo 2026 — Lean Communications</title>
+<meta name="description" content="A recap of VDC Innovation Week in Oslo 2026 for MAS Digitales Bauen (FHNW) — the A-Block, New Bodø Airport, AI tools and the people-first method of Lean Communications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#002A3A; --blue80:#335564; --blue60:#5a7681;
+    --green:#78BE20; --greentext:#5a9c17; --greendk:#4f8a13;
+    --teal:#33A6B1; --tealdark:#196573; --lime:#CDD751; --red:#E4022D;
+    --paper:#FFFFFF; --bone:#F6F4EE; --tint:#F3F8EC; --warm:#EAE6DE; --rule:#E7EAE6;
+    --ink:#002A3A; --body:#33454e;
+    --shadow:0 1px 2px rgba(0,42,58,.03),0 6px 22px rgba(0,42,58,.05);
+    --shadow-lg:0 2px 6px rgba(0,42,58,.05),0 20px 50px rgba(0,42,58,.08);
+    --dur:.22s; --ease:cubic-bezier(.2,.6,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--ink);
+    line-height:1.6;-webkit-font-smoothing:antialiased;font-weight:400;font-size:17px}
+  h1,h2,h3,h4,.display{font-family:'Barlow Semi Condensed',sans-serif;line-height:1.04;letter-spacing:-.01em}
+  ::selection{background:var(--green);color:#fff}
+  a{color:var(--tealdark);text-decoration:none}
+  a:hover{color:var(--blue)}
+  :focus-visible{outline:3px solid rgba(120,190,32,.55);outline-offset:3px;border-radius:4px}
+  img{max-width:100%;display:block}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+  section{padding:92px 0;position:relative}
+  section+section{border-top:1px solid var(--rule)}
+  .eyebrow{font-family:'Barlow Semi Condensed';text-transform:uppercase;letter-spacing:.16em;
+    font-weight:700;font-size:13px;color:var(--greendk);margin-bottom:16px;display:flex;align-items:center;gap:11px}
+  .eyebrow::before{content:"";width:30px;height:3px;background:var(--green);display:inline-block;border-radius:2px}
+  h2.sec{font-size:clamp(33px,4.6vw,54px);font-weight:800;margin-bottom:18px;max-width:20ch}
+  .g{color:var(--greentext)}
+  .lead{font-size:20px;color:var(--body);max-width:66ch;font-weight:300}
+  .lead b{font-weight:600;color:var(--ink)}
+  .src{color:var(--blue60);font-size:12.5px;letter-spacing:.01em}
+
+  .feature{background:var(--bone)}
+  .feature.green{background:var(--tint)}
+  .feature.warm{background:var(--warm)}
+
+  /* ---- nav ---- */
+  nav{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+  nav .wrap{display:flex;align-items:center;gap:20px;height:68px}
+  nav .logo{height:32px;width:auto;display:block}
+  nav .links{display:flex;gap:22px;align-items:center;margin-left:auto}
+  nav .links a{font-size:13.5px;color:var(--blue80);font-weight:500;letter-spacing:.01em;position:relative}
+  nav .links a:hover{color:var(--greendk)}
+  nav .links a.active{color:var(--blue)}
+  nav .links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--green);border-radius:2px}
+  .langsw{display:flex;gap:2px;background:var(--bone);border:1px solid var(--rule);border-radius:999px;padding:3px}
+  .lang-btn{font-family:'Barlow Semi Condensed';font-weight:700;font-size:12.5px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--blue60);background:transparent;border:none;cursor:pointer;
+    padding:6px 12px;border-radius:999px;transition:all var(--dur) var(--ease)}
+  .lang-btn:hover{color:var(--blue)}
+  .lang-btn.on{background:var(--blue);color:#fff}
+  .langhint{display:inline-flex;align-items:center;gap:9px;margin-bottom:22px;padding:8px 15px 8px 12px;background:var(--tint);border:1px solid var(--rule);border-radius:999px;font-size:13px;font-weight:300;color:var(--blue80);max-width:100%}
+  .langhint svg{width:16px;height:16px;flex:none;fill:none;stroke:var(--greendk);stroke-width:1.6}
+  .langhint span{text-wrap:pretty}
+  @media(max-width:920px){nav .links a[data-sec]{display:none}}
+
+  /* ---- hero ---- */
+  .hero{padding:96px 0 80px;overflow:hidden;position:relative}
+  .hero::after{content:"";position:absolute;right:-200px;top:-160px;width:600px;height:600px;
+    background:radial-gradient(circle,rgba(120,190,32,.13),transparent 60%);pointer-events:none}
+  .hero .eyebrow{margin-bottom:22px}
+  .hero h1{font-size:clamp(40px,6.2vw,80px);font-weight:800;max-width:24ch;letter-spacing:-.02em;text-wrap:balance}
+  .hero .sub{margin-top:30px;font-size:21px;font-weight:300;color:var(--body);max-width:60ch}
+  .hero .sub b{font-weight:600;color:var(--ink)}
+  .chips{margin-top:40px;display:flex;flex-wrap:wrap;gap:12px}
+  .chip{background:var(--paper);border:1px solid var(--rule);border-radius:999px;padding:9px 18px;
+    font-size:13.5px;font-weight:400;color:var(--body);box-shadow:var(--shadow);display:flex;align-items:center;gap:9px}
+  .chip b{font-family:'Barlow Semi Condensed';font-weight:700;color:var(--greendk);text-transform:uppercase;letter-spacing:.05em;font-size:12px}
+
+  /* ---- generic cards ---- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .card{background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:28px;box-shadow:var(--shadow);transition:border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+  .card:hover{border-color:#d4dbd2;box-shadow:var(--shadow-lg)}
+  .card h3{font-size:22px;font-weight:700;margin-bottom:9px}
+  .card p{font-size:15.5px;color:var(--body);font-weight:300}
+  @media(max-width:900px){.grid2,.grid3,.grid4{grid-template-columns:1fr}}
+
+  /* ---- stat grid ---- */
+  .statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px}
+  .stat{padding-left:28px;border-left:1px solid var(--rule)}
+  .stat:first-child{border-left:none;padding-left:0}
+  .stat .v{font-family:'Barlow Semi Condensed';font-weight:800;font-size:clamp(40px,5vw,58px);color:var(--tealdark);line-height:.92;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .stat:nth-child(2) .v{color:var(--greentext)}
+  .stat .t{margin-top:13px;font-size:14.5px;font-weight:300;color:var(--body);max-width:30ch}
+  @media(max-width:900px){.statgrid{grid-template-columns:1fr;gap:26px}.stat{border-left:none;padding-left:0}}
+
+  /* ---- week timeline ---- */
+  .week-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:42px}
+  .day{background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:26px 24px;box-shadow:var(--shadow);display:flex;flex-direction:column;border-top:4px solid var(--rule);transition:border-color var(--dur) var(--ease),transform var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+  .day:nth-child(1){border-top-color:var(--blue60)}
+  .day:nth-child(2){border-top-color:var(--teal)}
+  .day:nth-child(3){border-top-color:var(--tealdark)}
+  .day:nth-child(4){border-top-color:var(--green)}
+  .day:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:#d4dbd2}
+  .day .dd{font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);}
+  .day .dtag{font-size:12px;font-weight:500;color:var(--greendk);margin:4px 0 14px;letter-spacing:.02em}
+  .day h3{font-size:20px;font-weight:700;margin-bottom:10px;line-height:1.08}
+  .day p{font-size:14px;color:var(--body);font-weight:300;flex:1}
+  .day p b{font-weight:600;color:var(--ink)}
+  @media(max-width:900px){.week-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.week-grid{grid-template-columns:1fr}}
+
+  .note{margin-top:34px;background:var(--paper);border:1px solid var(--rule);border-left:5px solid var(--green);
+    border-radius:14px;padding:24px 28px;font-size:16px;font-weight:300;color:var(--body);box-shadow:var(--shadow);max-width:none}
+  .note b{font-weight:600;color:var(--ink)}
+  .feature .note{background:#fff}
+
+  /* ---- friday agenda ladder ---- */
+  .ladder{display:flex;flex-direction:column;gap:11px;margin-top:38px}
+  .rung{display:flex;align-items:center;gap:22px;background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:20px 26px;box-shadow:var(--shadow);transition:border-color var(--dur) var(--ease),transform var(--dur) var(--ease)}
+  .rung:hover{border-color:#d4dbd2;transform:translateX(4px)}
+  .rung .no{font-family:'Barlow Semi Condensed';font-weight:800;font-size:30px;color:var(--green);line-height:1;min-width:42px;font-variant-numeric:tabular-nums}
+  .rung .rx{font-family:'Barlow Semi Condensed';font-weight:700;font-size:21px;color:var(--ink);line-height:1.12}
+  .rung .clk{margin-left:auto;font-family:'Barlow Semi Condensed';font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--blue60);border-radius:999px;padding:5px 13px;white-space:nowrap}
+  .rung.s1 .clk{background:var(--blue)} .rung.s2 .clk{background:var(--tealdark)} .rung.s3 .clk{background:var(--teal)} .rung.s4 .clk{background:var(--greendk)}
+  @media(max-width:640px){.rung{flex-wrap:wrap;gap:10px}.rung .clk{margin-left:0}}
+
+  /* ---- then / now ---- */
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+  .col{background:var(--paper);border:1px solid var(--rule);border-radius:18px;padding:32px;box-shadow:var(--shadow)}
+  .col.now{border-top:4px solid var(--green)}
+  .col.then{border-top:4px solid var(--blue60)}
+  .col .lbl{font-family:'Barlow Semi Condensed';font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px}
+  .col.then .lbl{color:var(--blue60)} .col.now .lbl{color:var(--greendk)}
+  .col ul{list-style:none}
+  .col li{position:relative;padding-left:26px;margin:14px 0;font-size:16px;font-weight:300;color:var(--body)}
+  .col.then li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border:2px solid var(--blue60);border-radius:2px;transform:rotate(45deg)}
+  .col.now li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;background:var(--green);border-radius:2px;transform:rotate(45deg)}
+  @media(max-width:840px){.compare{grid-template-columns:1fr}}
+
+  /* ---- big room / photo ---- */
+  .media{margin-top:38px}
+  .bigroom{background:var(--blue);border-radius:18px;padding:8px;box-shadow:var(--shadow-lg)}
+  .bigroom image-slot{width:100%;height:auto;aspect-ratio:21/9;border-radius:12px;overflow:hidden}
+  .cap{margin-top:14px;font-size:13.5px;color:var(--blue60);font-weight:300;max-width:80ch}
+  .photo-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+  .photo-row image-slot{width:100%;height:300px}
+  @media(max-width:760px){.photo-row{grid-template-columns:1fr}.photo-row image-slot{height:240px}}
+
+  /* ---- aahka ---- */
+  .aahka-body{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;margin-top:38px;align-items:start}
+  .aahka-body p{font-size:16.5px;font-weight:300;color:var(--body);margin-bottom:18px}
+  .aahka-body p i{color:var(--tealdark);font-style:italic}
+  .aahka-photo{position:sticky;top:88px}
+  .aahka-photo image-slot{width:100%;height:480px;box-shadow:var(--shadow-lg)}
+  .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:14px;background:var(--paper);border:1px solid var(--rule);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+  .fact{padding:18px 16px;border-left:1px solid var(--rule);text-align:center}
+  .fact:first-child{border-left:none}
+  .fact .fv{font-family:'Barlow Semi Condensed';font-weight:800;font-size:24px;color:var(--ink);line-height:1}
+  .fact .fl{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--blue60);margin-top:6px;font-weight:500}
+  @media(max-width:900px){.aahka-body{grid-template-columns:1fr}.aahka-photo{position:static}.aahka-photo image-slot{height:360px}}
+
+  .callout{background:var(--paper);border:1px solid var(--rule);border-left:5px solid var(--green);border-radius:16px;padding:28px 32px;box-shadow:var(--shadow);margin-top:30px}
+  .callout .q{font-family:'Barlow Semi Condensed';font-weight:700;font-size:23px;line-height:1.2;color:var(--ink);max-width:60ch}
+
+  /* ---- circular org model ---- */
+  .org-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:36px}
+  .org-stage{position:relative;width:100%;max-width:520px;aspect-ratio:1;margin:0 auto}
+  #orgRing{position:absolute;inset:0}
+  .org-deco{position:absolute;inset:7%;border:2px dashed rgba(0,42,58,.16);border-radius:50%;animation:spin 60s linear infinite}
+  .org-deco.inner{inset:20%;border-color:rgba(120,190,32,.28);animation-duration:42s;animation-direction:reverse}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .org-hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:34%;height:34%;border-radius:50%;
+    background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;
+    font-family:'Barlow Semi Condensed';font-weight:700;font-size:clamp(13px,2.4vw,17px);line-height:1.05;padding:10px;
+    box-shadow:0 10px 30px rgba(0,42,58,.25);z-index:3}
+  .org-spoke{position:absolute;height:2px;background:rgba(0,42,58,.12);transform-origin:0 50%;z-index:1;transition:background var(--dur) var(--ease)}
+  .org-spoke.hot{background:var(--green)}
+  .org-node{position:absolute;transform:translate(-50%,-50%);z-index:2;background:var(--paper);border:1px solid var(--rule);
+    border-radius:999px;padding:9px 15px;box-shadow:var(--shadow);cursor:default;transition:all var(--dur) var(--ease);white-space:nowrap}
+  .org-node span{font-family:'Barlow Semi Condensed';font-weight:700;font-size:13.5px;color:var(--blue);letter-spacing:.01em}
+  .org-node.hot{background:var(--green);border-color:var(--green);transform:translate(-50%,-50%) scale(1.08);box-shadow:0 8px 22px rgba(120,190,32,.35)}
+  .org-node.hot span{color:#fff}
+  @media(max-width:840px){.org-wrap{grid-template-columns:1fr}.org-node span{font-size:11.5px}}
+
+  /* ---- interactive embed ---- */
+  .embed-wrap{margin-top:48px;background:var(--paper);border:1px solid var(--rule);border-radius:18px;box-shadow:var(--shadow-lg);overflow:hidden}
+  .embed-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding:26px 28px;flex-wrap:wrap;border-bottom:1px solid var(--rule)}
+  .embed-kicker{font-family:'Barlow Semi Condensed';font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--greendk);margin-bottom:6px}
+  .embed-title{font-family:'Barlow Semi Condensed';font-weight:800;font-size:26px;color:var(--ink);margin:0;line-height:1.05}
+  .embed-lead{font-size:14.5px;color:var(--body);font-weight:300;margin:8px 0 0;max-width:60ch}
+  .embed-open{display:inline-flex;align-items:center;gap:8px;flex:0 0 auto;font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.02em;text-transform:uppercase;color:#fff;background:var(--blue);border-radius:999px;padding:11px 20px;transition:background .2s ease}
+  .embed-open:hover{background:var(--tealdark);color:#fff}
+  .embed-open svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2}
+  .embed-frame{display:none}
+  .embed-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  /* fullscreen overlay (same page, no new tab) */
+  .embed-frame.fs{display:block;position:fixed;inset:0;width:100vw;height:100dvh;z-index:300;border-radius:0;background:var(--bone)}
+  .embed-fs-close{display:none}
+  .embed-frame.fs .embed-fs-close{display:inline-flex;position:absolute;top:14px;right:16px;z-index:5;align-items:center;gap:7px;background:var(--blue);color:#fff;border:none;border-radius:999px;padding:9px 16px;font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;box-shadow:var(--shadow-lg);transition:background .2s ease}
+  .embed-frame.fs .embed-fs-close:hover{background:var(--tealdark)}
+  .embed-fs-close svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.4}
+  /* three VDC-engine pillars */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .pillar{padding:24px 26px;border-left:1px solid var(--rule);display:flex;flex-direction:column;gap:5px}
+  .pillar:first-child{border-left:none}
+  .pillar .pico{width:48px;height:48px;margin-bottom:4px}
+  .pillar .pico svg{width:100%;height:100%}
+  .pillar .pnum{font-family:'Barlow Semi Condensed';font-weight:800;font-size:12px;letter-spacing:.1em;color:var(--greendk)}
+  .pillar h4{font-family:'Barlow Semi Condensed';font-weight:800;font-size:19px;text-transform:uppercase;color:var(--ink);margin:0;line-height:1.05}
+  .pillar p{font-size:13.5px;font-weight:300;color:var(--body);line-height:1.45;margin:2px 0 0}
+  .pillar[data-fs-module]{cursor:pointer;transition:background var(--dur) var(--ease)}
+  .pillar[data-fs-module]:hover{background:var(--tint)}
+  .pillar .popen{margin-top:12px;font-family:'Barlow Semi Condensed';font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--greendk);display:inline-flex;align-items:center;gap:6px}
+  .pillar .popen::after{content:"→";transition:transform var(--dur) var(--ease)}
+  .pillar[data-fs-module]:hover .popen::after{transform:translateX(4px)}
+  @media(max-width:780px){.pillars{grid-template-columns:1fr}.pillar{border-left:none;border-top:1px solid var(--rule)}.pillar:first-child{border-top:none}}
+  .embed-open{cursor:pointer}
+  .why{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .why-head{padding:26px 32px 0}
+  .why-head h4{font-family:'Barlow Semi Condensed';font-weight:800;font-size:21px;text-transform:uppercase;color:var(--ink);margin:0;display:flex;align-items:center;gap:11px}
+  .why-head h4::before{content:"";width:28px;height:3px;background:var(--green);border-radius:2px}
+  .embed-frame{border-bottom:1px solid var(--rule)}
+  .why-col{padding:30px 32px}
+  .why-col.trad{background:var(--bone);border-right:1px solid var(--rule)}
+  .why-col.wheel{background:var(--tint)}
+  .why-ico{height:84px;display:flex;align-items:center;justify-content:flex-start}
+  .why-ico svg{height:84px;width:auto}
+  .why-col h4{font-family:'Barlow Semi Condensed';font-weight:800;font-size:20px;margin:10px 0 14px;color:var(--ink)}
+  .why-col.trad h4{color:var(--blue60)}
+  .why-col.wheel h4{color:var(--greendk)}
+  .why-col ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .why-col li{position:relative;padding-left:24px;font-size:15px;font-weight:300;color:var(--body);line-height:1.45}
+  .why-col.trad li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:2px;background:var(--blue60);border-radius:2px}
+  .why-col.wheel li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;background:var(--green);border-radius:2px;transform:rotate(45deg)}
+  @media(max-width:640px){.why{grid-template-columns:1fr}.why-col.trad{border-right:none;border-bottom:1px solid var(--rule)}}
+
+  /* ---- takt flow ---- */
+  .takt-card{background:var(--paper);border:1px solid var(--rule);border-radius:18px;padding:30px;box-shadow:var(--shadow);margin-top:36px}
+  .tk-legend{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:8px}
+  .tk-key{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:500;color:var(--body)}
+  .tk-key i{width:13px;height:13px;border-radius:3px;display:inline-block}
+  .tk-grid{margin-top:18px;display:flex;flex-direction:column;gap:7px}
+  .tk-row{display:flex;gap:7px;align-items:stretch}
+  .tk-rowlabel{flex:0 0 128px;font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;display:flex;align-items:center;line-height:1.05}
+  .tk-head .tk-rowlabel{flex:0 0 128px}
+  .tk-loc{color:var(--blue);font-weight:600;font-size:12.5px}
+  .tk-area{flex:1;text-align:center;font-family:'Barlow Semi Condensed';font-weight:700;font-size:12px;color:var(--blue60);padding-bottom:2px}
+  .tk-cell{flex:1;aspect-ratio:5/2;border-radius:6px;background:var(--bone);border:1px solid var(--rule);transition:background .4s var(--ease),border-color .4s var(--ease)}
+  .tk-cell.on{background:var(--c);border-color:var(--c)}
+  .tk-cell.front{box-shadow:0 0 0 3px rgba(120,190,32,.18);animation:pulse 1.4s var(--ease) infinite}
+  @keyframes pulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.12)}}
+  .tk-axis{margin-top:14px;display:flex;justify-content:space-between;font-size:12.5px;color:var(--blue60);font-weight:500}
+  @media(max-width:640px){.tk-rowlabel{flex-basis:84px;font-size:10.5px}.tk-loc{font-size:10px}}
+
+  /* ---- two principles ---- */
+  .princ{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px}
+  .princ .p{background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:30px;box-shadow:var(--shadow);border-top:4px solid var(--green)}
+  .princ .p:nth-child(2){border-top-color:var(--teal)}
+  .princ .p .k{font-family:'Barlow Semi Condensed';font-weight:800;font-size:26px;color:var(--ink);margin-bottom:8px}
+  .princ .p p{font-size:16px;font-weight:300;color:var(--body)}
+  @media(max-width:760px){.princ{grid-template-columns:1fr}}
+
+  /* ---- people quote band ---- */
+  .people{background:var(--blue);color:#fff;overflow:hidden;position:relative}
+  .people::after{content:"";position:absolute;right:-160px;bottom:-200px;width:520px;height:520px;background:radial-gradient(circle,rgba(120,190,32,.2),transparent 62%);pointer-events:none}
+  .people .eyebrow{color:var(--lime)} .people .eyebrow::before{background:var(--lime)}
+  .people .q{font-family:'Barlow Semi Condensed';font-weight:800;font-size:clamp(30px,4.4vw,52px);line-height:1.08;max-width:18ch;letter-spacing:-.01em;position:relative;z-index:1}
+  .people .q em{color:var(--green);font-style:normal}
+  .people .body{margin-top:26px;font-size:18px;font-weight:300;color:#cdd9dd;max-width:62ch;position:relative;z-index:1}
+
+  /* ---- tools cards ---- */
+  .toolcard{display:flex;flex-direction:column;height:100%}
+  .toolcard .tl{font-family:'Barlow Semi Condensed';font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--green)}
+  .toolcard h3{margin:6px 0 10px}
+  .toolcard p{flex:1}
+  .btn{margin-top:18px;display:inline-flex;align-items:center;gap:8px;align-self:flex-start;
+    font-family:'Barlow Semi Condensed';font-weight:700;font-size:14px;letter-spacing:.02em;
+    background:var(--green);color:#fff;border-radius:999px;padding:10px 20px;transition:all var(--dur) var(--ease)}
+  .btn:hover{background:var(--greendk);color:#fff;transform:translateY(-1px);box-shadow:var(--shadow)}
+  .btn.ghost{background:transparent;color:var(--tealdark);border:1.5px solid var(--rule)}
+  .btn.ghost:hover{border-color:var(--tealdark);color:var(--tealdark);background:transparent}
+  .btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.2}
+
+  /* ---- cta box ---- */
+  .cta-box{background:var(--blue);border-radius:22px;padding:56px 50px;color:#fff;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+  .cta-box::after{content:"";position:absolute;right:-120px;bottom:-130px;width:380px;height:380px;background:radial-gradient(circle,rgba(120,190,32,.22),transparent 62%)}
+  .cta-box .eyebrow{color:var(--lime)} .cta-box .eyebrow::before{background:var(--lime)}
+  .cta-box h2{font-family:'Barlow Semi Condensed';font-size:clamp(32px,4.2vw,50px);font-weight:800;max-width:18ch;position:relative;z-index:1;line-height:1.04}
+  .cta-box .lead{color:#cdd9dd;max-width:62ch;position:relative;z-index:1;margin-top:18px;font-size:18px}
+  .order{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;position:relative;z-index:1}
+  .ord{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:24px}
+  .ord .h{font-family:'Barlow Semi Condensed';font-weight:700;font-size:19px;color:var(--lime);margin-bottom:8px}
+  .ord p{font-size:14.5px;color:#d6e0e4;font-weight:300}
+  .ord .f{margin-top:12px;font-family:'Barlow Semi Condensed';font-weight:600;font-size:11.5px;color:#9fb6bd;letter-spacing:.05em;text-transform:uppercase}
+  a.ord-link{display:block;text-decoration:none;transition:background var(--dur) var(--ease),border-color var(--dur) var(--ease),transform var(--dur) var(--ease)}
+  a.ord-link:hover{background:rgba(255,255,255,.12);border-color:var(--green);transform:translateY(-2px)}
+  a.ord-link:hover .f{color:var(--lime)}
+  @media(max-width:840px){.order{grid-template-columns:1fr}.cta-box{padding:40px 28px}}
+
+  /* ---- footer ---- */
+  footer{background:var(--bone);border-top:1px solid var(--rule);padding:54px 0}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;align-items:flex-start}
+  footer .logo{height:40px;width:auto;margin-bottom:14px}
+  footer .tag{font-size:14px;font-weight:300;color:var(--body);max-width:46ch}
+  footer .note{background:none;border:none;padding:0;margin:0;box-shadow:none;font-size:12.5px;color:var(--blue60);max-width:52ch;border-left:none}
+
+  /* ---- a-blokka illustrations ---- */
+  .ill-head{font-family:'Barlow Semi Condensed';font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--greendk);margin:48px 0 22px}
+  .ill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .ill{margin:0;background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+  .ill-art{position:relative;background:var(--bone);border:1px solid var(--rule);border-radius:12px;padding:16px;height:188px;display:flex;align-items:center;justify-content:center}
+  .ill-art svg{width:100%;height:100%}
+  .ill-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:#fff;font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;letter-spacing:.01em;text-align:center;pointer-events:none}
+  .ill figcaption{margin-top:16px;display:flex;flex-direction:column;gap:6px}
+  .ill figcaption b{font-family:'Barlow Semi Condensed';font-weight:700;font-size:18px;color:var(--ink)}
+  .ill figcaption>span{font-size:13.5px;font-weight:300;color:var(--body);line-height:1.5}
+  .ill-key{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:4px}
+  .ill-key i{width:11px;height:11px;border-radius:3px;display:inline-block;flex:none}
+  .ill-key i.dash{width:16px;height:0;border-top:2.5px dashed var(--green);border-radius:0}
+  .ill-key span{font-size:11.5px;font-weight:500;color:var(--blue60)}
+  .ill-phases{display:flex;gap:4px;margin-bottom:8px}
+  .ill-phases span{flex:1;text-align:center;font-family:'Barlow Semi Condensed';font-weight:700;font-size:9.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--blue60);background:#fff;border:1px solid var(--rule);border-radius:5px;padding:4px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .ill-takt{display:grid;grid-template-rows:repeat(5,1fr);gap:4px}
+  .ill-takt .tkr{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+  .ill-takt .tkc{aspect-ratio:5/2.4;border-radius:4px;background:#ECEAE2;border:1px solid var(--rule)}
+  @media(max-width:900px){.ill-grid{grid-template-columns:1fr;max-width:460px}}
+
+  /* ---- about: feedback loop / 15 PMs ---- */
+  .loop{margin-top:24px;display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;background:var(--paper);border:1px solid var(--rule);border-left:5px solid var(--green);border-radius:18px;padding:34px 38px;box-shadow:var(--shadow)}
+  .loop-num{text-align:center;padding-right:36px;border-right:1px solid var(--rule)}
+  .loop-num .ln-v{font-family:'Barlow Semi Condensed';font-weight:800;font-size:clamp(72px,9vw,104px);line-height:.86;color:var(--greentext);display:block;letter-spacing:-.02em}
+  .loop-num .ln-l{display:block;margin-top:12px;font-size:13px;font-weight:300;color:var(--body);max-width:18ch;margin-inline:auto;line-height:1.4}
+  .loop-body p{font-size:16px;font-weight:300;color:var(--body)}
+  .loop-body p+p{margin-top:14px}
+  .loop-body p b{font-weight:600;color:var(--ink)}
+  .loop-roles{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+  .loop-roles span{font-family:'Barlow Semi Condensed';font-weight:600;font-size:13px;letter-spacing:.01em;color:var(--tealdark);background:var(--tint);border:1px solid var(--rule);border-radius:999px;padding:6px 14px}
+  @media(max-width:760px){.loop{grid-template-columns:1fr;gap:22px}.loop-num{padding-right:0;border-right:none;border-bottom:1px solid var(--rule);padding-bottom:20px}.loop-num .ln-l{max-width:none}}
+
+  /* ---- photos / shots ---- */
+  .shot{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--rule);box-shadow:var(--shadow);background:var(--bone)}
+  .shot img{display:block;width:100%;height:100%;object-fit:cover}
+  .media{margin-top:38px}
+  .shot.wide{aspect-ratio:16/9}
+  .hero-shot{margin-top:34px}
+  .hero-shot figcaption{padding:10px 16px;font-size:12.5px;color:var(--blue60);font-weight:300;background:var(--paper);border-top:1px solid var(--rule)}
+  .photo-row .shot{aspect-ratio:3/2}
+  .shot.tall{aspect-ratio:4/5}
+  @media(max-width:760px){.photo-row .shot{aspect-ratio:16/10}}
+
+  /* ---- IPD 3-phase flow ---- */
+  .ipd-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:0;margin-top:8px}
+  .ipd-step{background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:24px 22px;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column}
+  .ipd-step.on{border-top:4px solid var(--green)}
+  .ipd-no{font-family:'Barlow Semi Condensed';font-weight:800;font-size:30px;line-height:1;color:var(--blue60);width:46px;height:46px;border-radius:50%;border:2px solid var(--rule);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .ipd-step.on .ipd-no{color:#fff;background:var(--green);border-color:var(--green)}
+  .ipd-step h4{font-family:'Barlow Semi Condensed';font-weight:700;font-size:19px;color:var(--ink);margin-bottom:8px;line-height:1.1}
+  .ipd-step p{font-size:14.5px;font-weight:300;color:var(--body);flex:1}
+  .ipd-tag{margin-top:14px;align-self:flex-start;font-family:'Barlow Semi Condensed';font-weight:700;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--greendk);background:var(--tint);border-radius:999px;padding:5px 12px}
+  .ipd-arrow{display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--blue60);font-weight:700;padding:0 10px}
+  @media(max-width:760px){.ipd-flow{grid-template-columns:1fr}.ipd-arrow{transform:rotate(90deg);padding:8px 0}}
+
+  /* ---- A-blokka results (dark band) ---- */
+  .results{margin-top:38px;background:var(--blue);border-radius:20px;padding:44px 44px 40px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow-lg)}
+  .results::after{content:"";position:absolute;right:-120px;top:-120px;width:360px;height:360px;background:radial-gradient(circle,rgba(120,190,32,.18),transparent 62%);pointer-events:none}
+  .results .eyebrow{color:var(--lime)}.results .eyebrow::before{background:var(--lime)}
+  .results-head .lead{color:#cdd9dd;max-width:60ch;font-size:17px;position:relative;z-index:1}
+  .res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:34px 0 30px;position:relative;z-index:1}
+  .res{padding:0 22px;border-left:1px solid rgba(255,255,255,.16)}
+  .res:first-child{border-left:none;padding-left:0}
+  .res .rv{font-family:'Barlow Semi Condensed';font-weight:800;font-size:clamp(40px,5vw,58px);line-height:.9;color:var(--lime);letter-spacing:-.01em}
+  .res .rl{font-family:'Barlow Semi Condensed';font-weight:700;font-size:16px;margin-top:10px;color:#fff}
+  .res .rs{font-size:13px;font-weight:300;color:#aebfc5;margin-top:5px}
+  .res-quote{font-family:'Barlow Semi Condensed';font-weight:800;font-style:italic;font-size:clamp(26px,3.6vw,40px);color:#fff;line-height:1.05;max-width:22ch;position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.16);padding-top:28px}
+  @media(max-width:780px){.res-grid{grid-template-columns:1fr 1fr;gap:24px 0}.res{padding:0 18px}.res:nth-child(odd){border-left:none;padding-left:0}.results{padding:34px 26px}}
+
+  /* ---- Bodø NLBO goals ---- */
+  .goals .goal{border-top:4px solid var(--rule)}
+  .goals .goal.sha{border-top-color:var(--blue60)}
+  .goals .goal.cost{border-top-color:var(--green)}
+  .goals .goal.qual{border-top-color:var(--teal)}
+  .goals .goal.time{border-top-color:var(--tealdark)}
+  .goal-h{font-family:'Barlow Semi Condensed';font-weight:800;font-size:20px;color:var(--ink);margin-bottom:12px}
+  .goal ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .goal li{position:relative;padding-left:20px;font-size:15px;font-weight:300;color:var(--body);line-height:1.4}
+  .goal li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;background:var(--green);border-radius:2px;transform:rotate(45deg)}
+
+  /* ---- target-price chart ---- */
+  .tp-chart{background:var(--paper);border:1px solid var(--rule);border-radius:18px;padding:24px 26px;box-shadow:var(--shadow)}
+  .tp-chart svg{width:100%;height:auto;display:block}
+  .tpc-ax{font-family:'Barlow Semi Condensed';font-weight:700;font-size:14px;fill:var(--blue60);text-transform:uppercase;letter-spacing:.04em}
+  .tpc-lab{font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px;fill:var(--blue);text-transform:uppercase;letter-spacing:.03em}
+  .tpc-mp{font-family:'Barlow Semi Condensed';font-weight:800;font-size:15px;fill:var(--greendk)}
+  .tpc-cap{font-family:'Jost';font-weight:500;font-size:12.5px;fill:#a5683a}
+  .tpc-flo{font-family:'Jost';font-weight:500;font-size:12.5px;fill:#5e8a2c}
+  .tpc-zone{font-family:'Barlow Semi Condensed';font-weight:700;font-size:13px}
+  .tpc-zone.over{fill:#9a5a2c}
+  .tpc-zone.under{fill:#4f7a23}
+  .tpc-save{font-family:'Jost';font-weight:600;font-size:11.5px;fill:#4f8a13}
+  .tp-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:14px;padding-top:16px;border-top:1px solid var(--rule)}
+  .tp-note{font-size:13.5px;font-weight:300;color:var(--body);max-width:52ch;margin:0}
+
+  /* ---- reveal ---- */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){
+    .rv,.rv.in{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+    .org-deco{animation:none}
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Menu">
+  <div class="wrap">
+    <img class="logo" src="assets/logo-lc.png" alt="Lean Communications">
+    <div class="links">
+      <a href="#week" data-sec="week" data-i18n="nav.week">The week</a>
+      <a href="#friday" data-sec="friday" data-i18n="nav.friday">Friday</a>
+      <a href="#ablokka" data-sec="ablokka" data-i18n="nav.ablokka">A-Block</a>
+      <a href="#bodo" data-sec="bodo" data-i18n="nav.bodo">Bodø</a>
+      <a href="#method" data-sec="method" data-i18n="nav.method">The method</a>
+      <a href="#tools" data-sec="tools" data-i18n="nav.tools">Tools</a>
+      <a href="#about" data-sec="about" data-i18n="nav.about">About</a>
+      <div class="langsw" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="no" aria-pressed="false">NO</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+        <button class="lang-btn" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="langhint">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"></circle><path d="M2.5 12h19M12 2.5c2.5 2.6 3.8 6 3.8 9.5S14.5 18.9 12 21.5C9.5 18.9 8.2 15.5 8.2 12S9.5 5.1 12 2.5z"></path></svg>
+      <span data-i18n="hero.langhint">This recap defaults to English — switch between NO / EN / ES / DE at the top right whenever you like.</span>
+    </div>
+    <div class="eyebrow" data-i18n="hero.eyebrow">VDC Innovation Week · Oslo · 2–5 June 2026</div>
+    <h1 data-i18n="hero.title">A week inside how Norway builds — <span class="g">together</span></h1>
+    <p class="sub" data-i18n="hero.sub">For the MAS Digitales Bauen students at FHNW.</p>
+    <div class="chips">
+      <span class="chip"><b data-i18n="hero.chipHostL">Host</b><span data-i18n="hero.chipHostV">Øyvind Børstad · Lean Communications</span></span>
+      <span class="chip"><b data-i18n="hero.chipWhenL">When</b><span data-i18n="hero.chipWhenV">Friday 5 June, 13:30–15:30</span></span>
+      <span class="chip"><b data-i18n="hero.chipWhereL">Where</b><span data-i18n="hero.chipWhereV">@Nordic Office of Architecture, Oslo</span></span>
+    </div>
+  </div>
+</header>
+
+<!-- WEEK -->
+<section id="week" class="feature">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="week.eyebrow">The whole week</div>
+    <h2 class="sec" data-i18n="week.title">Four days inside the workshop of Norwegian <span class="g">construction</span></h2>
+    <p class="lead" data-i18n="week.lead"></p>
+    <div class="week-grid">
+      <div class="day">
+        <div class="dd" data-i18n="week.d1.day">Tuesday 2 June</div>
+        <div class="dtag" data-i18n="week.d1.tag">Arrival</div>
+        <h3 data-i18n="week.d1.title">Welcome to Oslo</h3>
+        <p data-i18n="week.d1.body"></p>
+      </div>
+      <div class="day">
+        <div class="dd" data-i18n="week.d2.day">Wednesday 3 June</div>
+        <div class="dtag" data-i18n="week.d2.tag">Data & information</div>
+        <h3 data-i18n="week.d2.title">Cobuilder · AnkerDB · VDC conference</h3>
+        <p data-i18n="week.d2.body"></p>
+      </div>
+      <div class="day">
+        <div class="dd" data-i18n="week.d3.day">Thursday 4 June</div>
+        <div class="dtag" data-i18n="week.d3.tag">Consulting & co-location</div>
+        <h3 data-i18n="week.d3.title">Skanska · COWI</h3>
+        <p data-i18n="week.d3.body"></p>
+      </div>
+      <div class="day">
+        <div class="dd" data-i18n="week.d4.day">Friday 5 June</div>
+        <div class="dtag" data-i18n="week.d4.tag">Lean & VDC in practice</div>
+        <h3 data-i18n="week.d4.title">Bane NOR · COWI · Lean Communications</h3>
+        <p data-i18n="week.d4.body"></p>
+      </div>
+    </div>
+    <div class="note" data-i18n="week.relevance"></div>
+  </div>
+</section>
+
+<!-- FRIDAY agenda -->
+<section id="friday">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="friday.eyebrow">Friday · 13:30–15:30</div>
+    <h2 class="sec" data-i18n="friday.title">The afternoon <span class="g">with us</span></h2>
+    <p class="lead" data-i18n="friday.lead"></p>
+    <div class="ladder">
+      <div class="rung s1"><span class="no">01</span><span class="rx" data-i18n="friday.a1"></span><span class="clk">Samspill</span></div>
+      <div class="rung s2"><span class="no">02</span><span class="rx" data-i18n="friday.a2"></span><span class="clk">A-blokka</span></div>
+      <div class="rung s3"><span class="no">03</span><span class="rx" data-i18n="friday.a3"></span><span class="clk">Bodø</span></div>
+      <div class="rung s4"><span class="no">04</span><span class="rx" data-i18n="friday.a4"></span><span class="clk">Verktøy</span></div>
+      <div class="rung s1"><span class="no">05</span><span class="rx" data-i18n="friday.a5"></span><span class="clk">Folka</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMSPILL then/now -->
+<section id="samspill" class="feature green">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="samspill.eyebrow">Collaboration in Norway</div>
+    <h2 class="sec" data-i18n="samspill.title">How we worked then. How we work <span class="g">now</span>.</h2>
+    <p class="lead" data-i18n="samspill.lead"></p>
+    <div class="compare">
+      <div class="col then">
+        <div class="lbl" data-i18n="samspill.thenL">~20 years ago</div>
+        <ul>
+          <li data-i18n="samspill.then1"></li>
+          <li data-i18n="samspill.then2"></li>
+          <li data-i18n="samspill.then3"></li>
+          <li data-i18n="samspill.then4"></li>
+        </ul>
+      </div>
+      <div class="col now">
+        <div class="lbl" data-i18n="samspill.nowL">How we work today</div>
+        <ul>
+          <li data-i18n="samspill.now1"></li>
+          <li data-i18n="samspill.now2"></li>
+          <li data-i18n="samspill.now3"></li>
+          <li data-i18n="samspill.now4"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ill-head" data-i18n="samspill.ipdTitle">The Norwegian collaboration model — IPD</div>
+    <div class="ipd-flow">
+      <div class="ipd-step">
+        <div class="ipd-no">0</div>
+        <h4 data-i18n="samspill.ipd0L">Procurement</h4>
+        <p data-i18n="samspill.ipd0"></p>
+      </div>
+      <div class="ipd-arrow" aria-hidden="true">→</div>
+      <div class="ipd-step on">
+        <div class="ipd-no">1</div>
+        <h4 data-i18n="samspill.ipd1L">Development — as one team</h4>
+        <p data-i18n="samspill.ipd1"></p>
+        <span class="ipd-tag" data-i18n="samspill.ipd1tag">8–15 months co-located</span>
+      </div>
+      <div class="ipd-arrow" aria-hidden="true">→</div>
+      <div class="ipd-step on">
+        <div class="ipd-no">2</div>
+        <h4 data-i18n="samspill.ipd2L">Execution — as one team</h4>
+        <p data-i18n="samspill.ipd2"></p>
+        <span class="ipd-tag" data-i18n="samspill.ipd2tag">Shared risk &amp; reward</span>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:26px"><div class="q" data-i18n="samspill.ipdQuote"></div></div>
+  </div>
+</section>
+
+<!-- A-BLOKKA -->
+<section id="ablokka">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="ablokka.eyebrow">Project 1 · The A-Block</div>
+    <h2 class="sec" data-i18n="ablokka.title">A building where quality, cost and time were <span class="g">developed</span>, not guessed</h2>
+    <p class="lead" data-i18n="ablokka.lead"></p>
+    <div class="statgrid">
+      <div class="stat"><div class="v" data-i18n="ablokka.s1v">≈ 2.3 bn</div><div class="t" data-i18n="ablokka.s1t"></div></div>
+      <div class="stat"><div class="v" data-i18n="ablokka.s2v">20+</div><div class="t" data-i18n="ablokka.s2t"></div></div>
+      <div class="stat"><div class="v" data-i18n="ablokka.s3v">Jun 2025</div><div class="t" data-i18n="ablokka.s3t"></div></div>
+    </div>
+
+    <div class="ill-head" data-i18n="ablokka.illTitle">Three things we showed from the A-Block</div>
+    <div class="ill-grid">
+
+      <!-- 1 · Organisasjonsmodell -->
+      <figure class="ill">
+        <div class="ill-art">
+          <svg viewBox="0 0 240 200" role="img" aria-label="Circular organisation model">
+            <circle cx="120" cy="100" r="93" fill="none" stroke="#C8CED2" stroke-width="1" stroke-dasharray="2.5 3"></circle>
+            <g stroke="#E1E5E2" stroke-width="2">
+              <line x1="120" y1="100" x2="120" y2="30"></line>
+              <line x1="120" y1="100" x2="169" y2="51"></line>
+              <line x1="120" y1="100" x2="190" y2="100"></line>
+              <line x1="120" y1="100" x2="169" y2="149"></line>
+              <line x1="120" y1="100" x2="120" y2="170"></line>
+              <line x1="120" y1="100" x2="71" y2="149"></line>
+              <line x1="120" y1="100" x2="50" y2="100"></line>
+              <line x1="120" y1="100" x2="71" y2="51"></line>
+            </g>
+            <g>
+              <circle cx="120" cy="30" r="15" fill="#78BE20"></circle>
+              <circle cx="169" cy="51" r="15" fill="#33A6B1"></circle>
+              <circle cx="190" cy="100" r="15" fill="#78BE20"></circle>
+              <circle cx="169" cy="149" r="15" fill="#33A6B1"></circle>
+              <circle cx="120" cy="170" r="15" fill="#78BE20"></circle>
+              <circle cx="71" cy="149" r="15" fill="#33A6B1"></circle>
+              <circle cx="50" cy="100" r="15" fill="#78BE20"></circle>
+              <circle cx="71" cy="51" r="15" fill="#33A6B1"></circle>
+            </g>
+            <circle cx="120" cy="100" r="34" fill="#002A3A"></circle>
+          </svg>
+          <span class="ill-center" data-i18n="ablokka.illOrgCenter">Prosjektet</span>
+        </div>
+        <figcaption>
+          <b data-i18n="ablokka.ill1L">Organisasjonsmodell</b>
+          <span data-i18n="ablokka.ill1cap"></span>
+          <span class="ill-key">
+            <i style="background:#002A3A"></i><span data-i18n="ablokka.illOrgK1">Samspillsledelse</span>
+            <i style="background:#78BE20"></i><span data-i18n="ablokka.illOrgK2">Faggrupper</span>
+            <i style="background:#33A6B1"></i><span data-i18n="ablokka.illOrgK3">Prosessgrupper</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <!-- 2 · Kalkyle & modenhet -->
+      <figure class="ill">
+        <div class="ill-art">
+          <svg viewBox="0 0 280 200" role="img" aria-label="Cost and maturity development">
+            <line x1="30" y1="165" x2="266" y2="165" stroke="#E1E5E2" stroke-width="1.5"></line>
+            <line x1="30" y1="22" x2="30" y2="165" stroke="#E1E5E2" stroke-width="1.5"></line>
+            <!-- målpris -->
+            <line x1="30" y1="120" x2="266" y2="120" stroke="#78BE20" stroke-width="2" stroke-dasharray="5 4"></line>
+            <!-- kalkyle (kostnad) faller mot målpris -->
+            <polyline points="36,42 70,48 104,60 138,55 172,78 206,98 240,112 260,118" fill="none" stroke="#002A3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></polyline>
+            <!-- modenhet stiger -->
+            <polyline points="36,150 70,142 104,128 138,112 172,90 206,70 240,52 260,44" fill="none" stroke="#33A6B1" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></polyline>
+            <circle cx="260" cy="118" r="4" fill="#002A3A"></circle>
+            <circle cx="260" cy="44" r="4" fill="#33A6B1"></circle>
+          </svg>
+        </div>
+        <figcaption>
+          <b data-i18n="ablokka.ill2L">Kalkyle &amp; modenhet</b>
+          <span data-i18n="ablokka.ill2cap"></span>
+          <span class="ill-key">
+            <i style="background:#002A3A"></i><span data-i18n="ablokka.illCalcK1">Kalkyle</span>
+            <i class="dash g"></i><span data-i18n="ablokka.illCalcK2">Målpris</span>
+            <i style="background:#33A6B1"></i><span data-i18n="ablokka.illCalcK3">Modenhet</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <!-- 3 · Taktplan -->
+      <figure class="ill">
+        <div class="ill-art">
+          <div class="ill-phases">
+            <span data-i18n="ablokka.illTaktP1">Prosjektering</span>
+            <span data-i18n="ablokka.illTaktP2">Produksjon</span>
+            <span data-i18n="ablokka.illTaktP3">Ferdigstillelse</span>
+          </div>
+          <div class="ill-takt" id="abTakt" aria-hidden="true"></div>
+        </div>
+        <figcaption>
+          <b data-i18n="ablokka.ill3L">Taktplan</b>
+          <span data-i18n="ablokka.ill3cap"></span>
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <div class="media">
+      <figure class="shot wide">
+        <img src="assets/ablokka-dusk.jpg" alt="A-blokka / regjeringskvartalet at dusk" loading="lazy">
+      </figure>
+      <p class="cap" data-i18n="ablokka.shotCap"></p>
+      <div class="photo-row">
+        <figure class="shot"><img src="assets/ablokka-plaza.jpg" alt="A-blokka — full facade from the plaza" loading="lazy"></figure>
+        <figure class="shot"><img src="assets/ablokka-peak.jpg" alt="A-blokka — the glowing triangular peak" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <div class="results">
+      <div class="results-head">
+        <div class="eyebrow" data-i18n="ablokka.resEyebrow">Phase 2 production · results at handover</div>
+        <p class="lead" data-i18n="ablokka.resLead"></p>
+      </div>
+      <div class="res-grid">
+        <div class="res"><div class="rv" data-i18n="ablokka.res1V">100%</div><div class="rl" data-i18n="ablokka.res1L">Milestones delivered</div><div class="rs" data-i18n="ablokka.res1S">Every single milestone met</div></div>
+        <div class="res"><div class="rv" data-i18n="ablokka.res2V">1 mo</div><div class="rl" data-i18n="ablokka.res2L">Ahead of schedule</div><div class="rs" data-i18n="ablokka.res2S">Completed early</div></div>
+        <div class="res"><div class="rv" data-i18n="ablokka.res3V">3%</div><div class="rl" data-i18n="ablokka.res3L">Below budget</div><div class="rs" data-i18n="ablokka.res3S">Disciplined cost control</div></div>
+        <div class="res"><div class="rv" data-i18n="ablokka.res4V">14</div><div class="rl" data-i18n="ablokka.res4L">Change orders</div><div class="rs" data-i18n="ablokka.res4S">All agreed before handover</div></div>
+      </div>
+      <div class="res-quote" data-i18n="ablokka.resQuote">Predictability is designed — not hoped for.</div>
+    </div>
+  </div>
+</section>
+
+<!-- AAhkA -->
+<section id="aahka" class="feature warm">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="aahka.eyebrow">The A-Block · The slanted wall</div>
+    <h2 class="sec" data-i18n="aahka.title">AAhkA — all of Norway gathered in <span class="g">one artwork</span></h2>
+    <p class="lead" data-i18n="aahka.lead"></p>
+    <div class="aahka-body">
+      <div>
+        <p data-i18n="aahka.b1"></p>
+        <p data-i18n="aahka.b2"></p>
+        <p data-i18n="aahka.b3"></p>
+        <div class="facts">
+          <div class="fact"><div class="fv" data-i18n="aahka.fact1V">51 m</div><div class="fl" data-i18n="aahka.fact1L">Height</div></div>
+          <div class="fact"><div class="fv" data-i18n="aahka.fact2V">700+ m²</div><div class="fl" data-i18n="aahka.fact2L">Surface</div></div>
+          <div class="fact"><div class="fv" data-i18n="aahka.fact3V">3 months</div><div class="fl" data-i18n="aahka.fact3L">Mounting</div></div>
+          <div class="fact"><div class="fv" data-i18n="aahka.fact4V">Outi Pieski</div><div class="fl" data-i18n="aahka.fact4L">Artist</div></div>
+        </div>
+      </div>
+      <div class="aahka-photo">
+        <figure class="shot tall"><img src="assets/aahka-face.jpg" alt="AAhkA — woman with the Sámi horn cap, detail of the artwork" loading="lazy"></figure>
+        <figure class="shot tall" style="margin-top:18px"><img src="assets/aahka-hand.jpg" alt="AAhkA — hand with brass rings, detail of the artwork" loading="lazy"></figure>
+      </div>
+    </div>
+    <div class="callout"><div class="q" data-i18n="aahka.tieIn"></div></div>
+    <p class="src" style="margin-top:18px" data-i18n="aahka.src"></p>
+  </div>
+</section>
+
+<!-- BODØ -->
+<section id="bodo">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="bodo.eyebrow">Project 2 · New Bodø Airport</div>
+    <h2 class="sec" data-i18n="bodo.title">The same thinking, scaled up to a whole <span class="g">airport</span></h2>
+    <p class="lead" data-i18n="bodo.lead"></p>
+
+    <figure class="shot wide hero-shot">
+      <img src="assets/bodo-aurora.jpg" alt="New Bodø Airport under the northern lights — render" loading="lazy">
+      <figcaption data-i18n="bodo.heroCap">New Bodø Airport — render, Team NLBO.</figcaption>
+    </figure>
+
+    <div class="statgrid">
+      <div class="stat"><div class="v" data-i18n="bodo.s1v">7.2 bn</div><div class="t" data-i18n="bodo.s1t"></div></div>
+      <div class="stat"><div class="v" data-i18n="bodo.s2v">~27,000 m²</div><div class="t" data-i18n="bodo.s2t"></div></div>
+      <div class="stat"><div class="v" data-i18n="bodo.s3v">2029/30</div><div class="t" data-i18n="bodo.s3t"></div></div>
+    </div>
+    <div class="note" data-i18n="bodo.samspillNote"></div>
+
+    <!-- Target price mechanism -->
+    <div class="ill-head" data-i18n="bodo.tpTitle">How the target price is defined — and what happens above or below it</div>
+    <div class="tp-chart">
+      <svg viewBox="0 0 760 470" role="img" aria-label="Target price over time — stacked cost columns with shared risk and opportunity zones">
+        <!-- outcome zones -->
+        <rect x="372" y="128" width="368" height="32" fill="#F2E2D0"></rect>
+        <rect x="372" y="160" width="368" height="32" fill="#E7F0D9"></rect>
+        <!-- axes -->
+        <line x1="70" y1="34" x2="70" y2="410" stroke="#C8CED2" stroke-width="1.5"></line>
+        <line x1="70" y1="410" x2="748" y2="410" stroke="#C8CED2" stroke-width="1.5"></line>
+        <path d="M70 34 l-5 10 h10 z" fill="#C8CED2"></path>
+        <path d="M748 410 l-10 -5 v10 z" fill="#C8CED2"></path>
+        <!-- target / cap / floor reference lines -->
+        <line x1="356" y1="160" x2="740" y2="160" stroke="#78BE20" stroke-width="2.5" stroke-dasharray="7 4"></line>
+        <line x1="372" y1="128" x2="740" y2="128" stroke="#C0814F" stroke-width="1.4" stroke-dasharray="4 4"></line>
+        <line x1="372" y1="192" x2="740" y2="192" stroke="#6F9A38" stroke-width="1.4" stroke-dasharray="4 4"></line>
+        <!-- shared-direction arrows -->
+        <g stroke="#B5703A" stroke-width="2" fill="none"><path d="M540 158 V130"></path><path d="M540 130 l-4 6 M540 130 l4 6"></path></g>
+        <g stroke="#5E8A2C" stroke-width="2" fill="none"><path d="M540 162 V190"></path><path d="M540 190 l-4 -6 M540 190 l4 -6"></path></g>
+        <!-- build-up tower A: net cost -->
+        <rect x="100" y="235" width="64" height="175" fill="#335564"></rect>
+        <!-- B: + risk -->
+        <rect x="200" y="235" width="64" height="175" fill="#335564"></rect>
+        <rect x="200" y="192" width="64" height="43" fill="#33A6B1"></rect>
+        <!-- C: + overhead = target price -->
+        <rect x="300" y="235" width="64" height="175" fill="#335564"></rect>
+        <rect x="300" y="192" width="64" height="43" fill="#33A6B1"></rect>
+        <rect x="300" y="160" width="64" height="32" fill="#78BE20"></rect>
+        <!-- outcome tower D: final cost lands below target -->
+        <rect x="608" y="235" width="64" height="175" fill="#335564"></rect>
+        <rect x="608" y="203" width="64" height="32" fill="#33A6B1"></rect>
+        <rect x="608" y="174" width="64" height="29" fill="#78BE20"></rect>
+        <!-- saving bracket -->
+        <path d="M680 174 h8 V160 h-8" fill="none" stroke="#4f8a13" stroke-width="2"></path>
+        <!-- development bracket -->
+        <path d="M100 424 V430 H364 V424" fill="none" stroke="#9AA7AD" stroke-width="1.4"></path>
+        <!-- labels -->
+        <text class="tpc-ax" x="24" y="232" transform="rotate(-90 24 232)" data-i18n="bodo.tpAxisY">Cost</text>
+        <text class="tpc-ax" x="744" y="432" text-anchor="end" data-i18n="bodo.tpAxisX">Time →</text>
+        <text class="tpc-lab" x="232" y="446" text-anchor="middle" data-i18n="bodo.tpDev">Development phase</text>
+        <text class="tpc-lab" x="640" y="446" text-anchor="middle" data-i18n="bodo.tpFinal">Final cost</text>
+        <text class="tpc-mp" x="748" y="150" text-anchor="end" data-i18n="bodo.tpB3L">Target price</text>
+        <text class="tpc-cap" x="380" y="122" data-i18n="bodo.tpCap">Cap</text>
+        <text class="tpc-flo" x="380" y="206" data-i18n="bodo.tpFloor">Floor</text>
+        <text class="tpc-zone over" x="380" y="148" data-i18n="bodo.tpZoneRisk">Risk shared</text>
+        <text class="tpc-zone under" x="380" y="180" data-i18n="bodo.tpZoneOpp">Opportunity shared</text>
+        <text class="tpc-save" x="752" y="172" text-anchor="end" data-i18n="bodo.tpSave">Saving</text>
+      </svg>
+      <div class="tp-foot">
+        <span class="ill-key">
+          <i style="background:#335564"></i><span data-i18n="bodo.tpSeg1">Net cost</span>
+          <i style="background:#33A6B1"></i><span data-i18n="bodo.tpSeg2">Risk &amp; opportunity</span>
+          <i style="background:#78BE20"></i><span data-i18n="bodo.tpSeg3">Overhead &amp; profit</span>
+        </span>
+        <p class="tp-note" data-i18n="bodo.tpBuildNote"></p>
+      </div>
+    </div>
+
+    <!-- NLBO result goals -->
+    <div class="ill-head" data-i18n="bodo.goalsTitle">NLBO — result goals at handover</div>
+    <div class="grid4 goals">
+      <div class="card goal sha"><div class="goal-h" data-i18n="bodo.gSHA">SHA</div><ul><li data-i18n="bodo.gSHA1">Zero injuries</li></ul></div>
+      <div class="card goal cost"><div class="goal-h" data-i18n="bodo.gCost">Cost</div><ul><li data-i18n="bodo.gCost1">NOK 2.35 bn excl. VAT</li><li data-i18n="bodo.gCost2">«Beat» the target price</li></ul></div>
+      <div class="card goal qual"><div class="goal-h" data-i18n="bodo.gQual">Quality</div><ul><li data-i18n="bodo.gQual1">No significant defects at handover</li></ul></div>
+      <div class="card goal time"><div class="goal-h" data-i18n="bodo.gTime">Time</div><ul><li data-i18n="bodo.gTime1">ICT complete: 01.05.28</li><li data-i18n="bodo.gTime2">MC: 01.12.27</li><li data-i18n="bodo.gTime3">Handover: 01.06.28</li></ul></div>
+    </div>
+
+    <div class="photo-row" style="margin-top:24px">
+      <figure class="shot"><img src="assets/bodo-day1.jpg" alt="New Bodø Airport in daylight — render" loading="lazy"></figure>
+      <figure class="shot"><img src="assets/bodo-aurora2.jpg" alt="New Bodø Airport apron under the aurora — render" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD: org / cost / takt -->
+<section id="method" class="feature">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="org.eyebrow">Tool 1 · Organisation</div>
+    <h2 class="sec" data-i18n="org.title">The <span class="g">circular</span> model</h2>
+    <p class="lead" data-i18n="org.lead"></p>
+    <div class="org-wrap">
+      <div class="org-stage">
+        <div class="org-deco"></div>
+        <div class="org-deco inner"></div>
+        <div id="orgRing"></div>
+        <div class="org-hub" id="orgHub">Cross-functional collaboration teams</div>
+      </div>
+      <div>
+        <p class="lead" style="font-size:17px" data-i18n="org.caption"></p>
+      </div>
+    </div>
+
+    <div class="embed-wrap">
+      <div class="embed-head">
+        <div>
+          <div class="embed-kicker" data-i18n="embed.kicker">Try it yourself</div>
+          <h3 class="embed-title" data-i18n="embed.title">The core of the VDC engine</h3>
+          <p class="embed-lead" data-i18n="embed.lead"></p>
+        </div>
+        <button class="embed-open" type="button" data-fs-open>
+          <span data-i18n="embed.open">Open full screen</span>
+          <svg viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+        </button>
+      </div>
+      <div class="pillars">
+        <article class="pillar" data-fs-module="A" role="button" tabindex="0">
+          <div class="pico" aria-hidden="true">
+            <svg viewBox="0 0 60 60">
+              <circle cx="30" cy="30" r="24" fill="none" stroke="#C8CED2" stroke-width="1.4" stroke-dasharray="2.5 3"></circle>
+              <g fill="#78BE20"><circle cx="30" cy="9" r="4.4"></circle><circle cx="48" cy="20" r="4.4"></circle><circle cx="48" cy="40" r="4.4"></circle><circle cx="30" cy="51" r="4.4"></circle><circle cx="12" cy="40" r="4.4"></circle><circle cx="12" cy="20" r="4.4"></circle></g>
+              <circle cx="30" cy="30" r="9.5" fill="#002A3A"></circle>
+            </svg>
+          </div>
+          <div class="pnum">01</div>
+          <h4 data-i18n="embed.p1L">Organisation</h4>
+          <p data-i18n="embed.p1"></p>
+          <span class="popen" data-i18n="embed.popen">Open</span>
+        </article>
+        <article class="pillar" data-fs-module="B" role="button" tabindex="0">
+          <div class="pico" aria-hidden="true">
+            <svg viewBox="0 0 60 60">
+              <g>
+                <rect x="8" y="12" width="13" height="9" rx="1.5" fill="#335564"></rect>
+                <rect x="23" y="12" width="13" height="9" rx="1.5" fill="#E2E6E3"></rect>
+                <rect x="38" y="12" width="13" height="9" rx="1.5" fill="#E2E6E3"></rect>
+                <rect x="8" y="25" width="13" height="9" rx="1.5" fill="#E2E6E3"></rect>
+                <rect x="23" y="25" width="13" height="9" rx="1.5" fill="#33A6B1"></rect>
+                <rect x="38" y="25" width="13" height="9" rx="1.5" fill="#E2E6E3"></rect>
+                <rect x="8" y="38" width="13" height="9" rx="1.5" fill="#E2E6E3"></rect>
+                <rect x="23" y="38" width="13" height="9" rx="1.5" fill="#E2E6E3"></rect>
+                <rect x="38" y="38" width="13" height="9" rx="1.5" fill="#78BE20"></rect>
+              </g>
+            </svg>
+          </div>
+          <div class="pnum">02</div>
+          <h4 data-i18n="embed.p2L">Planning &amp; takt</h4>
+          <p data-i18n="embed.p2"></p>
+          <span class="popen" data-i18n="embed.popen">Open</span>
+        </article>
+        <article class="pillar" data-fs-module="C" role="button" tabindex="0">
+          <div class="pico" aria-hidden="true">
+            <svg viewBox="0 0 60 60">
+              <line x1="10" y1="48" x2="52" y2="48" stroke="#E2E6E3" stroke-width="2"></line>
+              <line x1="10" y1="30" x2="52" y2="30" stroke="#78BE20" stroke-width="2" stroke-dasharray="4 3"></line>
+              <polyline points="12,16 22,20 32,28 42,26 50,38" fill="none" stroke="#002A3A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+              <polyline points="12,44 22,40 32,33 42,24 50,18" fill="none" stroke="#33A6B1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></polyline>
+            </svg>
+          </div>
+          <div class="pnum">03</div>
+          <h4 data-i18n="embed.p3L">Cost &amp; risk</h4>
+          <p data-i18n="embed.p3"></p>
+          <span class="popen" data-i18n="embed.popen">Open</span>
+        </article>
+      </div>
+      <div class="embed-frame">
+        <button class="embed-fs-close" type="button" data-fs-close>
+          <svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          <span data-i18n="embed.close">Close</span>
+        </button>
+        <iframe title="Gjennomføringsmodellen — interaktiv metode" data-src="gjennomforingsmodellen.html"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cost">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="cost.eyebrow">Tool 2 · Cost</div>
+    <h2 class="sec" data-i18n="cost.title">Cost is developed on <span class="g">two principles</span></h2>
+    <p class="lead" data-i18n="cost.lead"></p>
+    <div class="princ">
+      <div class="p"><div class="k" data-i18n="cost.p1L">Reduce risk</div><p data-i18n="cost.p1"></p></div>
+      <div class="p"><div class="k" data-i18n="cost.p2L">Raise maturity</div><p data-i18n="cost.p2"></p></div>
+    </div>
+    <div class="callout"><div class="q" data-i18n="cost.sum"></div></div>
+  </div>
+</section>
+
+<section id="takt" class="feature">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="takt.eyebrow">Tool 3 · Progress</div>
+    <h2 class="sec" data-i18n="takt.title">Schedules built as <span class="g">production systems</span></h2>
+    <p class="lead" data-i18n="takt.lead"></p>
+    <div class="takt-card">
+      <div class="tk-legend" id="taktLegend"></div>
+      <div class="tk-grid" id="taktGrid"></div>
+      <div class="tk-axis">
+        <span data-i18n="takt.legendArea">Control areas</span>
+        <span data-i18n="takt.legendTrain">Trains move one area per takt</span>
+      </div>
+    </div>
+    <p class="cap" data-i18n="takt.caption"></p>
+    <div class="note" data-i18n="takt.note"></div>
+  </div>
+</section>
+
+<!-- PEOPLE -->
+<!-- TOOLS -->
+<section id="tools">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="tools.eyebrow">AI tools & our own tools</div>
+    <h2 class="sec" data-i18n="tools.title">The tools we <span class="g">showed you</span></h2>
+    <p class="lead" data-i18n="tools.lead"></p>
+    <div class="grid3" style="margin-top:38px;align-items:stretch">
+      <div class="card toolcard">
+        <div class="tl" data-i18n="tools.c1L">Digital tools</div>
+        <h3 data-i18n="tools.c1L">Digital tools</h3>
+        <p data-i18n="tools.c1"></p>
+        <a class="btn" href="digitale-verktoy.html"><span data-i18n="tools.c1cta">Open</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="card toolcard">
+        <div class="tl" data-i18n="tools.c2L">Taktplan</div>
+        <h3 data-i18n="tools.c2L">Taktplan</h3>
+        <p data-i18n="tools.c2"></p>
+        <a class="btn" href="https://taktplan.replit.app" target="_blank" rel="noopener"><span data-i18n="tools.c2cta">Open</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </div>
+      <div class="card toolcard">
+        <div class="tl" data-i18n="tools.c3L">Heard of VDC?</div>
+        <h3 data-i18n="tools.c3L">Heard of VDC?</h3>
+        <p data-i18n="tools.c3"></p>
+        <a class="btn" href="https://leancommunications.thinkific.com/collections" target="_blank" rel="noopener"><span data-i18n="tools.c3cta">Take the course</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      </div>
+    </div>
+    <div class="note" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px">
+      <span style="flex:1;min-width:280px"><b data-i18n="tools.coursesL">Training programmes</b> — <span data-i18n="tools.courses"></span></span>
+      <a class="btn ghost" href="https://leancommunications.thinkific.com/collections" target="_blank" rel="noopener"><span data-i18n="tools.coursescta">See all courses</span><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- PEOPLE -->
+<section id="people" class="people">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="people.eyebrow">The most important thing</div>
+    <div class="q" data-i18n="people.q"></div>
+    <p class="body" data-i18n="people.body"></p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="feature">
+  <div class="wrap rv">
+    <div class="eyebrow" data-i18n="about.eyebrow">About us</div>
+    <h2 class="sec" data-i18n="about.title">Who you spent the afternoon <span class="g">with</span></h2>
+    <p class="lead" data-i18n="about.lead"></p>
+    <div class="grid2" style="margin-top:36px">
+      <div class="card" style="border-top:4px solid var(--green)"><h3 data-i18n="about.c1L">Skills development</h3><p data-i18n="about.c1"></p></div>
+      <div class="card" style="border-top:4px solid var(--teal)"><h3 data-i18n="about.c2L">Project management</h3><p data-i18n="about.c2"></p></div>
+    </div>
+    <div class="loop">
+      <div class="loop-num"><span class="ln-v" data-i18n="about.pmNum">15</span><span class="ln-l" data-i18n="about.pmNumL">project managers, 100% in real projects</span></div>
+      <div class="loop-body">
+        <p data-i18n="about.pm1"></p>
+        <div class="loop-roles">
+          <span data-i18n="about.pmR1">Project managers</span>
+          <span data-i18n="about.pmR2">Design managers</span>
+          <span data-i18n="about.pmR3">Progress planners</span>
+          <span data-i18n="about.pmR4">Project controllers</span>
+          <span data-i18n="about.pmR5">Culture &amp; team developers</span>
+        </div>
+        <p data-i18n="about.pm2"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="wrap rv">
+    <div class="cta-box">
+      <div class="eyebrow" data-i18n="cta.eyebrow">Thanks for the visit</div>
+      <h2 data-i18n="cta.title">Best of luck with Digitales Bauen</h2>
+      <p class="lead" data-i18n="cta.lead"></p>
+      <div class="order">
+        <a class="ord ord-link" href="https://leancommunications.thinkific.com/collections" target="_blank" rel="noopener"><div class="h" data-i18n="cta.o1L">The courses</div><p data-i18n="cta.o1"></p><div class="f" data-i18n="cta.o1f">leancommunications.no</div></a>
+        <div class="ord"><div class="h" data-i18n="cta.o2L">The tools</div><p data-i18n="cta.o2"></p><div class="f" data-i18n="cta.o2f">Digital tools</div></div>
+        <div class="ord"><div class="h" data-i18n="cta.o3L">Us</div><p data-i18n="cta.o3"></p><div class="f" data-i18n="cta.o3f">Get in touch</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <img class="logo" src="assets/logo-lc.png" alt="Lean Communications">
+      <p class="tag" data-i18n="footer.tag"></p>
+    </div>
+    <p class="note" data-i18n="footer.note"></p>
+  </div>
+</footer>
+
+<script src="content.js"></script>
+<script src="image-slot.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
